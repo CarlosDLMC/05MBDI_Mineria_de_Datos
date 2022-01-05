@@ -4,7 +4,8 @@ from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 
 apiUrl = "https://api.pro.coinbase.com"
-sym = "BTC-USD"
+# sym = "BTC-USD"
+# sym = "BNB-USD"
 # sym = "LINK-USD"
 # sym = "ETH-USD"
 # sym = "LTC-USD"
@@ -38,5 +39,5 @@ fechas = [time.strftime("%Y-%m-%d") for time in fechas]
 
 todo_junto = [f"{sym[:3]},{fechas[i]},{precios[i][2]},{precios[i][1]},{precios[i][3]},{precios[i][4]}\n" for i in range(len(precios))]
 
-with open("historicos/bitcoin_modificado.csv", "a") as coin:
+with open("historicos/modificados/Solana_modificado.csv", "a") as coin:
     coin.writelines(todo_junto)

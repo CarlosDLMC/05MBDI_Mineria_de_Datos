@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 
 apiUrl = "https://api.pro.coinbase.com"
-sym = "DOT-USD"
+sym = "DOGE-USD"
 end_date = datetime.now().date()
 day = timedelta(days=1)
 
@@ -33,7 +33,7 @@ def get_prices(sym, end_date, days=200):
 # fig, ax = plt.subplots(nrows=2)
 # ax[0].plot(precios)
 
-precios = get_prices(sym, end_date=datetime.strptime("6 07 2021", "%d %m %Y"))
+precios = get_prices(sym, end_date=datetime.strptime("7 07 2021", "%d %m %Y"))
 fig, ax = plt.subplots()
 ax.plot(precios)
 plt.show()
